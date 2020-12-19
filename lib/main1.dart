@@ -1,38 +1,32 @@
 import 'package:flutter/material.dart';
 
 /// This Widget is the main application widget.
-//class MyApp extends StatelessWidget {
-//  static const String _title = 'App';
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return MaterialApp(
-//      title: _title,
-//      home: MyStatefulWidget(),
-//    );
-//  }
-//}
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
+class MyStatefulWidget2 extends StatefulWidget {
+  MyStatefulWidget2({Key key}) : super(key: key);
 
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _MyStatefulWidgetState extends State<MyStatefulWidget2> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     FittedBox(
-        child: Image(image: AssetImage('images/map.jpg')), fit: BoxFit.fill),
+        child: Image(
+          image: AssetImage('images/ekarta.jpg'),
+          width: 600,
+        ),
+        fit: BoxFit.fill),
     FittedBox(
-        child: Image(image: AssetImage('images/img1.jpg')), fit: BoxFit.fill),
+        child: Image(image: AssetImage('images/ehealth.jpg')),
+        fit: BoxFit.fill),
     FittedBox(
-        child: Image(image: AssetImage('images/omg2.jpg')), fit: BoxFit.fill),
+        child: Image(image: AssetImage('images/eemp.jpg')), fit: BoxFit.fill),
     FittedBox(
-        child: Image(image: AssetImage('images/chat.jpg')), fit: BoxFit.fill),
+        child: Image(image: AssetImage('images/echat.jpg')), fit: BoxFit.fill),
   ];
 
   void _onItemTapped(int index) {
@@ -56,15 +50,15 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
-            title: Text('Местоположение'),
+            title: Text('Карта'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            title: Text('Показатели'),
+            title: Text('Здоровье'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.watch),
-            title: Text('Устройство'),
+            icon: Icon(Icons.people),
+            title: Text('Сотрудники'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
